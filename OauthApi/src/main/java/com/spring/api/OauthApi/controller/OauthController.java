@@ -15,8 +15,8 @@ import com.spring.api.OauthApi.oltu.OltuOauth2Helper;
 @RestController
 @RequestMapping("/api/oauth")
 public class OauthController {
-	private String client_id = "723d7fa9860b5effda18";  // Identificador de la aplicación, valor fijo 
-	private String client_secret = "5ff153778105b32cc062f6b04c83316844a439e6"; // Contraseña de la aplicacion, puede ser reseteado a otro valor 
+	private String client_id = "";  // Identificador de la aplicación, valor fijo 
+	private String client_secret = ""; // Contraseña de la aplicacion, puede ser reseteado a otro valor 
 	private String remoteEndPoint = "https://github.com/login/oauth/authorize"; // EndPoint del servidor Oauth para la autenticacion del usuario 
 	private String tokenLocation = "https://github.com/login/oauth/access_token";  // Endpoint del servidor Oauth para la solicitud del token con las credenciales de la aplicación
 	private String localEndPoint = "http://localhost:8081/api/oauth/token"; // EndPoint a donde redirigirá el servidor Oauth tras resolver las autenticaciones

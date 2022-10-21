@@ -13,8 +13,8 @@ import models.Usuario;
 
 @Controller
 public class GreetingController {
-	private String client_id = "723d7fa9860b5effda18"; //Client_id de la aplicacion
-	private String client_secret = "5ff153778105b32cc062f6b04c83316844a439e6"; //Client_secret de la aplicacion
+	private String client_id = ""; //Client_id de la aplicacion
+	private String client_secret = ""; //Client_secret de la aplicacion
 	private String remoteEndPoint = "https://github.com/login/oauth/authorize"; //URL de autorizacion del servidor OAuth2
 	private String tokenLocation = "https://github.com/login/oauth/access_token"; //URL de peticion del token del servidor
 	private String localEndPoint = "http://localhost:8080/oauth/code"; //URL del callback de nuestra aplicacion para la gestion del CODE
