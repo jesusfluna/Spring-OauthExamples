@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>OauthSpring Tests</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:insert="shareds/bootstrapCDN.html">  
+<body class="text-center">
+    <!-- <p>Get your greeting <a href="/greeting">here</a></p> -->
+    
+    <div style="margin-top: 5%;margin-left: 35%;margin-right: 35%">
+	    <main class="form-signin w-100 m-auto">
+		  <form action="#" th:action="@{/}" method="post" th:object="${user}">
+		    <img class="mb-4" th:src="@{/images/inerco_ico.png}" alt="Inerco_ico" width="72" height="72">
+		    <h1 class="h3 mb-3 fw-normal">Credenciales</h1>
+		
+		    <div class="form-floating">
+		      <input type="text" class="form-control" id="floatingInput" placeholder="Usuario" th:field="*{nombre}">
+		      <label for="floatingInput">Usuario (user)</label>
+		    </div>
+		    <div class="form-floating">
+		      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" th:field="*{contrasena}">
+		      <label for="floatingPassword">Contraseña (12345)</label>
+		    </div>
+		    <button class="w-100 btn btn-lg btn-success" type="submit">Acceder</button>
+		   	</form>
+		   	
+		   	<br>
+		   	<form action="#" th:action="@{/oauth}" method="get">
+		    	<div class="row text-center">
+		    		<div class="col">
+			    		<button class="w-100 btn btn-lg btn-secondary" type="submit" style="height: 75%">
+			    		<img class="mb-4" th:src="@{/images/github.png}" alt="github" width="30" height="30" style="margin-right: 5%; margin-top: 0; margin-bottom: 0">
+			    		Login con Github 
+			    		</button>
+		    		</div>
+		    	</div>
+		    </form>
+		    <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+		  
+		</main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>OauthSpring Tests</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:insert="shareds/bootstrapCDN.html">  
+<body class="text-center">
+    
+    <div class="alert alert-success" th:if="${ !error }">
+	    <img class="mb-4" th:src="@{/images/inerco_ico.png}" alt="Inerco_ico" width="72" height="72">
+	    <h1 class="h3 mb-3 fw-normal">Token:</h1>
+		<h3 th:text="${token}"></h3>
+	</div>
+	
+	<div class="alert alert-danger" th:if="${ error }">
+	    <img class="mb-4" th:src="@{/images/inerco_ico.png}" alt="Inerco_ico" width="72" height="72">
+	    <h1 class="h3 mb-3 fw-normal">ERROR:</h1>
+		<h3> There is something wrong in the server token response</h3>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Success</title>
+<style type="text/css">
+    span {
+        display: inline-block;
+        width: 200px;
+        text-align: left;
+    }
+</style>
+<link th:insert="shareds/bootstrapCDN.html">  
+</head>
+<body>
+<div align="center" th:if="${ correcto }" class="alert alert-success mt-5">
+    <h2>Registration Succeeded!, Greetings for login with us</h2>
+    <span>Nombre:</span><span th:text="${user.nombre}"></span><br/>
+    <span>Contraseña:</span><span th:text="${user.contrasena}"></span><br/>
+</div>
+
+<div align="center" th:if="${ !correcto }" class="alert alert-danger mt-5">
+    <h2>ERROR!, username or password incorrect, please try again </h2>
+</div>
+
+</body>
+</html>
